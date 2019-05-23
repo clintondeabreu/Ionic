@@ -9,6 +9,7 @@ import { RiskFactorsPage } from '../pages/risk-factors/risk-factors';
 import { TreatmentsPage } from '../pages/treatments/treatments';
 import { MedicationPage } from '../pages/medication/medication';
 import { SelfDiagnosisPage } from '../pages/self-diagnosis/self-diagnosis';
+import { HttpClientModule } from '@angular/common/http';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -27,6 +28,7 @@ import { DataProvider } from '../providers/data/data';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
