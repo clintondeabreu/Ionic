@@ -15,17 +15,11 @@
   <h1 id="leukemiaTypes-heading4" style="color:#FF0000;">
     Leukemia Types
   </h1>
-  <h3 id="leukemiaTypes-heading5" style="color:#FF0000;">
-    Heading
-  </h3>
   <div id="leukemiaTypes-markdown3" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      Paragraph
-    </p>
   </div>
 
 <div>
   
-  <p *ngFor="let item of lukemiatypes">{{item.Description}}</p>
+  <li *ngFor="let item of lukemiatypes"> <b style="color: #FF0000"> {{item.Name}}</b> <br> {{item.Description}} <br> <br> </li>
 </div>
 </ion-content>

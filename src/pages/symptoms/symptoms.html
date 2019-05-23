@@ -16,13 +16,15 @@
     Symptoms
   </h1>
   <h3 id="symptoms-heading7" style="color:#FF0000;">
-    <li *ngFor="let item of symptoms">{{item.Description}}</li>
+      <ng-container *ngFor="let symptomType of symptomtypes; index as i; trackBy: trackByIndex">
+          <p> {{symptomType.Description}} </p>
+          <ul *ngFor="let symptom of symptoms; index as j; trackBy: trackByIndex">
+              <li *ngIf="symptom.SymptomTypeID === i +1">
+                  <p >{{symptom.Description}}</p>
+              </li>
+          </ul>
+      </ng-container>
   </h3>
   <div id="symptoms-markdown4" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      Paragraph
-    </p>
   </div>
-
-  
 </ion-content>
