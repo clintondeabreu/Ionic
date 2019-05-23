@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Self Diagnosis
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page7">
+  <h1 id="selfDiagnosis-heading14" style="color:#FF0000;text-align:center;">
+    Self Diagnosis
+  </h1>
+  <form id="selfDiagnosis-form6">
+    <ion-item id="selfDiagnosis-toggle2">
+      <ion-label>
+        Fever?
+      </ion-label>
+      <ion-toggle (ionChange)="notify()" color="assertive" checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item id="selfDiagnosis-toggle3">
+      <ion-label>
+        Fatigue or weakness?
+      </ion-label>
+      <ion-toggle (ionChange)="notify()" color="assertive" checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item id="selfDiagnosis-toggle4">
+      <ion-label>
+        Weight Loss?
+      </ion-label>
+      <ion-toggle (ionChange)="notify()" color="assertive" checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item id="selfDiagnosis-toggle5">
+      <ion-label>
+        Easy bleeding or bruising?
+      </ion-label>
+      <ion-toggle (ionChange)="notify()" color="assertive" checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item id="selfDiagnosis-toggle6">
+      <ion-label>
+        Small red dots on skin?
+      </ion-label>
+      <ion-toggle (ionChange)="notify()" color="assertive" checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item id="selfDiagnosis-toggle7">
+      <ion-label>
+        Excessive Sweating?
+      </ion-label>
+      <ion-toggle (ionChange)="notify()" color="assertive" checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item id="selfDiagnosis-toggle8">
+      <ion-label>
+        Bone pain or tenderness?
+      </ion-label>
+      <ion-toggle (ionChange)="notify()" color="assertive" checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item id="selfDiagnosis-toggle9">
+      <ion-label>
+        Frequent or severe infections?
+      </ion-label>
+      <ion-toggle (ionChange)="notify()" color="assertive" checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item id="selfDiagnosis-toggle10">
+      <ion-label>
+        Pain under lower ribs?
+      </ion-label>
+      <ion-toggle (ionChange)="notify()" color="assertive" checked="false"></ion-toggle>
+    </ion-item>
+    <button id="selfDiagnosis-button1" ion-button color="assertive" (click)='openToDoAlert();' block>
+      Submit
+    </button>
+  </form>
+  <p style="color: #FF0000">*Disclaimer: This quiz is for reference purposes only, if you feel that your symptoms are severe, consult a doctor immediately.</p>
+</ion-content>
