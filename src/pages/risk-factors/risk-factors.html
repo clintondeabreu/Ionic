@@ -16,7 +16,14 @@
     Risk Factors
   </h1>
   <h3 id="riskFactors-heading9" style="color:#FF0000;">
-    Heading
+    <ng-container *ngFor="let riskfactorType of riskfactortypes; index as i; trackBy: trackByIndex">
+          <p>{{riskfactorType.Description}}</p>
+          <ul *ngFor="let riskfactor of riskfactors; index as j; trackBy: trackByIndex">
+            <li *ngIf="riskfactor.RFT_ID === i +1">
+              <p>{{riskfactor.Description}}</p>
+            </li>
+          </ul>
+</ng-container>
   </h3>
   <div id="riskFactors-markdown5" class="show-list-numbers-and-dots">
     <p style="color:#000000;">

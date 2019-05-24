@@ -7,6 +7,7 @@ import { DataProvider } from '../../providers/data/data'
   templateUrl: 'symptoms.html'
 })
 export class SymptomsPage {
+  show:any;
   symptoms: any;
   symptomtypes: any;
   constructor(public navCtrl: NavController, public dataProvider: DataProvider) {
@@ -27,4 +28,14 @@ export class SymptomsPage {
     console.log(this.symptomtypes);
     });
     }
+    getItems(ev:any) {
+      this.show();
+      var val = ev.target.value;
+       if (val && val.trim() != '') {
+       this.symptoms = (this.symptoms).filter((item) => {
+   
+       return ((item.symptoms).toLowerCase().indexOf(val.toLowerCase()) > -1);
+       });
+       }
+       }
 }

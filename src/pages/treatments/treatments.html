@@ -16,7 +16,14 @@
     Treatments
   </h1>
   <h3 id="treatments-heading11" style="color:#FF0000;">
-    Heading
+    <ng-container *ngFor="let treatmentType of treatmenttypes; index as i; trackBy: trackByIndex">
+      <p>{{treatmentType.Description}}</p>
+      <ul *ngFor="let treatment of treatments; index as j; trackBy: trackByIndex">
+        <li *ngIf="treatment.TreatmentTypeID === i +1">
+          <p>{{treatment.Description}}</p>
+        </li>
+      </ul>
+</ng-container>
   </h3>
   <div id="treatments-markdown6" class="show-list-numbers-and-dots">
     <p style="color:#000000;">
