@@ -32,7 +32,14 @@
   </div>
 
   <div>
-    <p *ngFor="let item of riskfactors">{{item.Description}}</p>
+    
+    <br>
+    <li *ngFor="let item of riskfactortypes;">
+      {{item.Description}}
+      <p *ngFor="let items of riskfactors">
+        {{items.Description}}
+      </p>
+    </li>
   </div>
 
 </ion-content>

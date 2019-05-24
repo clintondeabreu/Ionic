@@ -20,12 +20,15 @@
   </h3>
   <div id="leukemiaTypes-markdown3" class="show-list-numbers-and-dots">
     <p style="color:#000000;">
-      Paragraph
+
     </p>
   </div>
 
 <div>
   
-  <p *ngFor="let item of lukemiatypes">{{item.Description}}</p>
+  <li *ngFor="let item of lukemiatypes "><b style="color:red">{{item.Name}}</b> <br> {{item.Description}} <br><br></li>
+
+  
+  
 </div>
 </ion-content>
