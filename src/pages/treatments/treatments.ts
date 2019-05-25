@@ -26,4 +26,11 @@ export class TreatmentsPage {
     console.log(this.treatmenttypes);
     });
     }
+  searchTreatments(lookfor:string) {
+    this.dataProvider.searchTreatment(lookfor)
+    .then(data => {
+    this.treatments = data;
+    console.log(this.treatments);
+    });
+    }
 }

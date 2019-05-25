@@ -25,7 +25,16 @@ export class DataProvider {
     });
     });
     }
-
+    searchSymptom(lookfor:string)
+    {
+      return new Promise(resolve => {
+        this.http.post(this.apiUrl+'/api/Symptom/searchSymptom'+'?lookfor='+lookfor,lookfor).subscribe(data => {
+        resolve(data);}, 
+        err => {
+        console.log(err);
+        });
+        });
+    }
   getLukemia()
   {
     return new Promise(resolve => {
@@ -47,6 +56,16 @@ export class DataProvider {
       });
       });
   }
+  searchLukemiaType(lookfor:string)
+  {
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/api/IllnessType/searchIllnessType'+'?lookfor='+lookfor,lookfor).subscribe(data => {
+      resolve(data);}, 
+      err => {
+      console.log(err);
+      });
+      });
+  }
   getMedication()
   {
     return new Promise(resolve => {
@@ -61,14 +80,23 @@ export class DataProvider {
   getMedicationType()
   {
     return new Promise(resolve => {
-      this.http.get(this.apiUrl+'/api/Medication/getMedicationType').subscribe(data => {
+      this.http.get(this.apiUrl+'/api/MedicationType/getMedicationType').subscribe(data => {
       resolve(data);}, 
       err => {
       console.log(err);
       });
       });
   }
-
+  searchMedication(lookfor:string)
+  {
+    return new Promise(resolve => {
+      this.http.post(this.apiUrl+'/api/Medication/searchMedication'+'?lookfor='+lookfor,lookfor).subscribe(data => {
+      resolve(data);}, 
+      err => {
+      console.log(err);
+      });
+      });
+  }
 //RISK FACTORS ###################################################################################################
 
 getRiskFactor()
@@ -81,11 +109,20 @@ getRiskFactor()
     });
     });
 }
-
 getRiskFactorType()
 {
   return new Promise(resolve => {
     this.http.get(this.apiUrl+'/api/RiskFactorType/getRiskFactorType').subscribe(data => {
+    resolve(data);}, 
+    err => {
+    console.log(err);
+    });
+    });
+}
+searchRiskFactor(lookfor:string)
+{
+  return new Promise(resolve => {
+    this.http.post(this.apiUrl+'/api/RiskFactor/searchRiskFactor'+'?lookfor='+lookfor,lookfor).subscribe(data => {
     resolve(data);}, 
     err => {
     console.log(err);
@@ -109,6 +146,16 @@ getTreatmentType()
 {
   return new Promise(resolve => {
     this.http.get(this.apiUrl+'/api/TreatmentType/getTreatmentTypes').subscribe(data => {
+    resolve(data);}, 
+    err => {
+    console.log(err);
+    });
+    });
+}
+searchTreatment(lookfor:string)
+{
+  return new Promise(resolve => {
+    this.http.post(this.apiUrl+'/api/Treatment/searchTreatment'+'?lookfor='+lookfor,lookfor).subscribe(data => {
     resolve(data);}, 
     err => {
     console.log(err);

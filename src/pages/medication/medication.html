@@ -10,32 +10,17 @@
 </ion-header>
 <ion-content padding id="page6">
   <form id="medication-form5">
-    <ion-searchbar placeholder="" name="" id="medication-search5"></ion-searchbar>
+    <ion-searchbar name="lookfor" id="lookfor" [(ngModel)]='lookfor' (search)="searchMedications(lookfor)"></ion-searchbar>
   </form>
   <h1 id="medication-heading12" style="color:#FF0000;">
     Medication
   </h1>
-  <h3 id="medication-heading13" style="color:#FF0000;">
     <ng-container *ngFor="let medicationType of medicationtypes; index as i; trackBy: trackByIndex">
-      <p>{{medicationType.Description}}</p>
+      <h3 style="color:#FF0000;">{{medicationType.Description}}</h3>
       <ul *ngFor="let medication of medications; index as j; trackBy: trackByIndex">
         <li *ngIf="medication.MT_ID === i +1">
           <p>{{medication.Description}}</p>
         </li>
       </ul>
 </ng-container>
-  </h3>
-  <div id="medication-markdown7" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      Paragraph
-    </p>
-  </div>
-
-  <div>
-   
-      
-      <br>
-      <li *ngFor="let hello of medications">{{hello.Description}}</li>
- 
-  </div>
 </ion-content>

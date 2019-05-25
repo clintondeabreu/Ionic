@@ -9,17 +9,12 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page2">
-  <form id="leukemiaTypes-form1">
-    <ion-searchbar placeholder="" name="" id="leukemiaTypes-search1"></ion-searchbar>
-  </form>
+    <form id="leukemiaTypes-form">
+        <ion-searchbar name="lookfor" id="lookfor" [(ngModel)]='lookfor' (search)="searchLuemiaTypes(lookfor)"></ion-searchbar>
+    </form>
   <h1 id="leukemiaTypes-heading4" style="color:#FF0000;">
     Leukemia Types
   </h1>
-  <div id="leukemiaTypes-markdown3" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-
-    </p>
-  </div>
 
 <div>
   <li *ngFor="let item of lukemiatypes "><b style="color:red">{{item.Name}}</b> <br> {{item.Description}} <br><br></li>

@@ -26,4 +26,11 @@ export class LeukemiaTypesPage {
     console.log(this.lukemiatypes);
     });
     }
+    searchLuemiaTypes(lookfor:string) {
+      this.dataProvider.searchLukemiaType(lookfor)
+      .then(data => {
+      this.lukemiatypes = data;
+      console.log(this.lukemiatypes);
+      });
+      }
 }

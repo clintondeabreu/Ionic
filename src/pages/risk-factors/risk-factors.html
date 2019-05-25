@@ -10,36 +10,17 @@
 </ion-header>
 <ion-content padding id="page4">
   <form id="riskFactors-form3">
-    <ion-searchbar placeholder="" name="" id="riskFactors-search3"></ion-searchbar>
+    <ion-searchbar name="lookfor" id="lookfor" [(ngModel)]='lookfor' (search)="searchRiskFactors(lookfor)"></ion-searchbar>
   </form>
   <h1 id="riskFactors-heading8" style="color:#FF0000;">
     Risk Factors
   </h1>
-  <h3 id="riskFactors-heading9" style="color:#FF0000;">
-    <ng-container *ngFor="let riskfactorType of riskfactortypes; index as i; trackBy: trackByIndex">
-          <p>{{riskfactorType.Description}}</p>
+  <ng-container *ngFor="let riskfactorType of riskfactortypes; index as i; trackBy: trackByIndex">
+          <h3 style="color:#FF0000;">{{riskfactorType.Description}} </h3>
           <ul *ngFor="let riskfactor of riskfactors; index as j; trackBy: trackByIndex">
             <li *ngIf="riskfactor.RFT_ID === i +1">
               <p>{{riskfactor.Description}}</p>
             </li>
           </ul>
-</ng-container>
-  </h3>
-  <div id="riskFactors-markdown5" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      Paragraph
-    </p>
-  </div>
-
-  <div>
-    
-    <br>
-    <li *ngFor="let item of riskfactortypes;">
-      {{item.Description}}
-      <p *ngFor="let items of riskfactors">
-        {{items.Description}}
-      </p>
-    </li>
-  </div>
-
+  </ng-container>
 </ion-content>

@@ -28,14 +28,11 @@ export class SymptomsPage {
     console.log(this.symptomtypes);
     });
     }
-    getItems(ev:any) {
-      this.show();
-      var val = ev.target.value;
-       if (val && val.trim() != '') {
-       this.symptoms = (this.symptoms).filter((item) => {
-   
-       return ((item.symptoms).toLowerCase().indexOf(val.toLowerCase()) > -1);
-       });
-       }
-       }
+  searchSymptoms(lookfor:string) {
+    this.dataProvider.searchSymptom(lookfor)
+    .then(data => {
+    this.symptoms = data;
+    console.log(this.symptoms);
+    });
+    }
 }

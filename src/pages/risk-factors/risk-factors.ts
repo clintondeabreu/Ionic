@@ -26,4 +26,11 @@ export class RiskFactorsPage {
     console.log(this.riskfactortypes);
     });
     }
+    searchRiskFactors(lookfor:string) {
+      this.dataProvider.searchRiskFactor(lookfor)
+      .then(data => {
+      this.riskfactors = data;
+      console.log(this.riskfactors);
+      });
+      }
 }

@@ -26,4 +26,11 @@ export class MedicationPage {
     console.log(this.medicationtypes);
     });
     }
+    searchMedications(lookfor:string) {
+      this.dataProvider.searchMedication(lookfor)
+      .then(data => {
+      this.medications = data;
+      console.log(this.medications);
+      });
+      }
 }
