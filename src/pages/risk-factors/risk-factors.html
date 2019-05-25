@@ -10,12 +10,15 @@
 </ion-header>
 <ion-content padding id="page4">
   <form id="riskFactors-form3">
+
+      <!-- Search Bar Similar on Each Page -->
     <ion-searchbar placeholder="" name="" id="riskFactors-search3"></ion-searchbar>
   </form>
   <h1 id="riskFactors-heading8" style="color:#FF0000;">
     Risk Factors
   </h1>
   <h3 id="riskFactors-heading9" style="color:#FF0000;">
+    <!-- Each Risk Factor is grouped by their respective Type -->
     <ng-container *ngFor="let riskfactorType of riskfactortypes; index as i; trackBy: trackByIndex">
           <p>{{riskfactorType.Description}}</p>
           <ul *ngFor="let riskfactor of riskfactors; index as j; trackBy: trackByIndex">
