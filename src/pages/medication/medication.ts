@@ -12,6 +12,7 @@ export class MedicationPage {
     this.getMedications();
     this.getMedicationTypes();
   }
+  // each medications data is retrieved from the api as well as the medication type
   getMedications() {
     this.dataProvider.getMedication()
     .then(data => {
@@ -26,6 +27,7 @@ export class MedicationPage {
     console.log(this.medicationtypes);
     });
     }
+      // the search bar is implemeted here to search for the medication
     searchMedications(lookfor:string) {
       this.dataProvider.searchMedication(lookfor)
       .then(data => {

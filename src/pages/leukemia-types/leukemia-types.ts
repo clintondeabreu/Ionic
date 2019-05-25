@@ -12,6 +12,9 @@ export class LeukemiaTypesPage {
     this.getLuemias();
     this.getLuemiaTypes();
   }
+  
+  // <!-- Each Lukemia data is retrived from the api -->
+
   getLuemias() {
     this.dataProvider.getLukemia()
     .then(data => {
@@ -26,6 +29,7 @@ export class LeukemiaTypesPage {
     console.log(this.lukemiatypes);
     });
     }
+    // the search bar is implemeted here to search for the leukima
     searchLuemiaTypes(lookfor:string) {
       this.dataProvider.searchLukemiaType(lookfor)
       .then(data => {

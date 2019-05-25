@@ -14,6 +14,7 @@ export class SymptomsPage {
     this.getSymptoms();
     this.getSymptomTypes();
   }
+  // each symptoms data is retrieved from the api as well as the symtpoms type
   getSymptoms() {
     this.dataProvider.getSymptom()
     .then(data => {
@@ -28,6 +29,7 @@ export class SymptomsPage {
     console.log(this.symptomtypes);
     });
     }
+      // the search bar is implemeted here to search for the symptoms
   searchSymptoms(lookfor:string) {
     this.dataProvider.searchSymptom(lookfor)
     .then(data => {

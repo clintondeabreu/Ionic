@@ -12,6 +12,7 @@ export class SelfDiagnosisPage {
   public isToggled: boolean;
   constructor(public navCtrl: NavController, private alertController:AlertController) {
   }
+  // a counter to see if the results are in fact leukima or not
   public notify() {
     this.counter = this.counter +1;
   }
@@ -24,6 +25,7 @@ export class SelfDiagnosisPage {
     }
     return this.message;
   }
+  // an alert to notify the user what their results are 
 openToDoAlert(){
   let addToDoAlert = this.alertController.create({
     title : "Self Diagnosis Response",

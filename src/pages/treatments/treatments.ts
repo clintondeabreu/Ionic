@@ -12,6 +12,7 @@ export class TreatmentsPage {
     this.getTreatments();
     this.getTreatmentTypes();
   }
+  // each treatement data is retrieved from the api as well as the tretament type
   getTreatments() {
     this.dataProvider.getTreatment()
     .then(data => {
@@ -26,6 +27,7 @@ export class TreatmentsPage {
     console.log(this.treatmenttypes);
     });
     }
+    // the search bar is implemeted here to search for the treatements
   searchTreatments(lookfor:string) {
     this.dataProvider.searchTreatment(lookfor)
     .then(data => {

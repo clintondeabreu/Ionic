@@ -15,6 +15,7 @@
   <h1 id="treatments-heading10" style="color:#FF0000;">
     Treatments
   </h1>
+  {% comment %} treatment factor is sorted by their different groups  {% endcomment %}
     <ng-container *ngFor="let treatmentType of treatmenttypes; index as i; trackBy: trackByIndex">
       <h3 style="color:#FF0000;">{{treatmentType.Description}}</h3>
       <ul *ngFor="let treatment of treatments; index as j; trackBy: trackByIndex">
