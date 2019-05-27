@@ -15,7 +15,7 @@
   <h1 id="symptoms-heading6" style="color:#FF0000;">
     Symptoms
   </h1>
-   {% comment %} each symptom is sorted by their different groups  {% endcomment %}
+    <!--each symptom is sorted by their different groups-->  
       <ng-container *ngFor="let symptomType of symptomtypes; index as i; trackBy: trackByIndex">
           <h3 style="color:#FF0000;"> {{symptomType.Description}} </h3>
           <ul *ngFor="let symptom of symptoms; index as j; trackBy: trackByIndex">
