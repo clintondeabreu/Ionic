@@ -3,9 +3,6 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>
-      Leukemia Types
-    </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page2">
@@ -17,7 +14,6 @@
   </h1>
 
   <!-- Each Lukemia is grouped by their repective types -->
-
 <div>
   <li *ngFor="let item of lukemiatypes "><b style="color:red">{{item.Name}}</b> <br> {{item.Description}} <br><br></li>
 </div>

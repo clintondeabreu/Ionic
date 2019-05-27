@@ -13,11 +13,17 @@ export class SelfDiagnosisPage {
   constructor(public navCtrl: NavController, private alertController:AlertController) {
   }
   // a counter to see if the results are in fact leukima or not
-  public notify() {
+  public notifyHigh() {
+    this.counter = this.counter +3;
+  }
+  public notifyMedium() {
+    this.counter = this.counter +2;
+  }
+  public notifyLow() {
     this.counter = this.counter +1;
   }
   public score(){
-    if(this.counter <= 3){
+    if(this.counter <= 10){
       this.message = "The probability of Leukemia is unlikely.";
     }
     else{

@@ -7,6 +7,15 @@ export class DataProvider {
   constructor(public http: HttpClient) {
     console.log('Hello DataProvider Provider');
   }
+  getAdditionalInfo() {
+    return new Promise(resolve => {
+    this.http.get(this.apiUrl+'/api/AdditionalInfo/getAdditionalInfo').subscribe(data => {
+    resolve(data);}, 
+    err => {
+    console.log(err);
+    });
+    });
+    }
   getSymptom() {
     return new Promise(resolve => {
     this.http.get(this.apiUrl+'/api/Symptom/getSymptoms').subscribe(data => {
